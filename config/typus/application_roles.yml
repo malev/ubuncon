@@ -1,0 +1,11 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Contact: create, read, update, delete
+  Link: create, read, update, delete
+  Page: create, read, update, delete
+  Speaker: create, read, update, delete
+  Sponsor: create, read, update, delete
+  User: create, read, update, delete

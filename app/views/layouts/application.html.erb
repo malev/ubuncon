@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <%= formtastic_stylesheet_link_tag %>
+  <%= stylesheet_link_tag :flutie, 'screen', :media => 'all', :cache => true %>
+  <%= javascript_include_tag "jquery", "jquery-ui", "prefilled_input", "rails", "application", :cache => true %>
+  <%= csrf_meta_tag %>
+  <!-- Ubuntu's template data-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <%= stylesheet_link_tag 'ubuntu_template' %>
+  <!-- Custom -->
+  <%= yield(:head) %>
+  <title><%= h(yield(:title) || "UbuCon 2010 - Argentina") %></title>
+</head>
+<body class="<%= body_class %>">
+<!-- Header -->
+  <div id="header">
+    <div class="container" style="width: 1000px;">
+      <ul class="links"><li class="menu-137 active-trail first active"><a href="http://ohio.ubuntu-us.org/" title="" class="active">Home</a></li>
+        <li><%= link_to 'Registrate!', new_register_path %></li>
+        <li class="menu-119"><a href="http://ohio.ubuntuforums.org/" title="">Para quienes?</a></li>
+        <li class="menu-134"><a href="https://launchpad.net/%7Eubuntu-us-ohio" title="">Organizado por</a></li>
+        <li class="menu-135"><a href="https://wiki.ubuntu.com/ArgentinaTeam" title="">Wiki</a></li>
+        <li class="menu-136 last"><a href="http://ubuntu.com/" title="">Ubuntu.com</a></li>
+        <li><a href="#">mas cosas aquí</a></li>
+      </ul>
+      <div id="logo">
+        <a href="http://www.ubuntu-ar.org/" title="Ubuntu Argentina">
+          <%= image_tag 'logo-ar.png' %>
+        </a>
+      </div>
+      <div id="block-block-3" class="block block-block">
+        <div class="content"></div>
+      </div>
+    </div>
+  </div>
+<!-- Sub Header -->
+  <div id="subheader">
+    <div class="container" style="width: 1000px;">
+      <div class="container-inside">
+        <ul class="links secondary-links">
+          <li class="menu-148 first"><a href="http://ohio.ubuntu-us.org/calendar" title="Calendar">Calendario</a></li>
+          <li class="menu-149"><a href="http://ohio.ubuntu-us.org/reloco" title="ReLoCos">Donde</a></li>
+          <li class="menu-151"><a href="http://ohio.ubuntu-us.org/irc" title="IRC">Algo loco</a></li>
+          <li class="menu-153"><a href="http://ohio.ubuntu-us.org/planet" title="">Planet</a></li>
+          <li class="menu-161 last"><a href="http://ohio.ubuntu-us.org/burningcircle" title="Burning Circle Podcast">Podcast</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+<div id="content">
+  <div class="container" style="width: 1000px;">
+    <div id="sidebar-right" class="sidebar">
+      <div id="block-aggregator-category-1" class="block block-aggregator">
+        <h2>links???</h2>
+        links a algunos sitios copados
+      </div>
+      <div id="block-aggregator-category-1" class="block block-aggregator">
+        <h2>twitteR???</h2>
+        <ul class="list">
+          <li>tweet 1</li>
+          <li>tweet 2</li>
+        </ul>
+      </div>
+      <div id="block-aggregator-category-1" class="block block-aggregator">
+        <h2>Around the LoCo</h2>
+        <div class="content">
+          <div class="item-list">
+            <ul>
+              <li class="first"><a href="http://www.mail-archive.com/ubuntu-us-ohio@lists.launchpad.net/msg00592.html">Re: [Ubuntu-us-ohio] Contact Rotation</a></li>
+              <li><a href="http://www.mail-archive.com/ubuntu-us-ohio@lists.launchpad.net/msg00591.html">Re: [Ubuntu-us-ohio] Contact Rotation</a></li>
+              <li><a href="http://www.mail-archive.com/ubuntu-us-ohio@lists.launchpad.net/msg00590.html">[Ubuntu-us-ohio] Contact Rotation</a></li>
+              <li class="last"><a href="http://www.mail-archive.com/ubuntu-us-ohio@lists.launchpad.net/msg00585.html">Re: [Ubuntu-us-ohio] Photos ( Round One )</a></li>
+            </ul>
+          </div>
+          <div class="more-link">
+            <a href="http://ohio.ubuntu-us.org/aggregator/categories/1" title="View this category's recent news.">more</a>
+          </div>
+        </div>
+      </div>
+      <div id="block-aggregator-category-1" class="block block-aggregator">
+        <%= link_to image_tag('ubuntu101010.png'), 'http://www.ubuntu.com' %>
+      </div>
+
+  </div>
+  <div id="center">
+    <h1>Welcome</h1>
+    <div id="node-2" class="node clear-block">
+      <div class="meta">
+      </div>
+    <div class="content">
+<p><%= image_tag 'logo-ar.png', :style => 'float: right; margin: 20px;' %></p>
+<!-- CONTENT -->
+  <p>Welcome to Ubuntu AR! Glad you could stop by.</p>
+  <p>Todo robado del sitio de Ubunto ohaio</p>
+  <%= render :partial => 'shared/flashes' -%>
+  <%= yield %>
+  <%= render :partial => 'shared/javascript' %>
+<!-- CONTENT -->
+</div>
+
+</div></div></div></div>
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container" style="width: 1000px;">
+    <div class="block">
+      <h2>Legal Disclaimer</h2>
+© 2010 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.
+    </div>
+    <div class="block">
+      <h2>Ubuntu Ohio</h2>
+      <a href="http://loco.ubuntu.com/teams/ubuntu-us-ohio">Approved LoCo</a>
+      <a href="http://launchpad.net/%7Eubuntu-us-ohio">Launchpad</a>
+      <a href="http://ohio.ubuntuforums.org/">Forums</a>
+    </div>
+    <div class="block">
+      <h2>User</h2>
+      <% if signed_in? -%>
+        <%= link_to "Sign out", sign_out_path, :method => :delete %>
+      <% else -%>
+        <%= link_to "Sign in", sign_in_path %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+</body>
+</html>

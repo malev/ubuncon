@@ -1,0 +1,17 @@
+development: &default
+  adapter: mysql
+  database: ubucon_development
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
+
+test: &test
+  <<: *default
+  database: ubucon_test
+
+
+cucumber:
+  <<: *test

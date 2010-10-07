@@ -1,0 +1,64 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Contact:
+  fields:
+    default: first_name, last_name, email, url
+    form: first_name, last_name, email, url, body
+  order_by: 
+  relationships: 
+  filters: 
+  search: 
+  application: ubucon
+
+Link:
+  fields:
+    default: name, url, position
+    form: name, url, description
+  order_by: position
+  relationships: 
+  filters: 
+  search: name
+  application: ubucon
+
+Page:
+  fields:
+    default: title, published_at, state, position
+    form: title, body, published_at, state
+  order_by: position
+  relationships: 
+  filters: 
+  search: title
+  application: ubucon
+
+Speaker:
+  fields:
+    default: name, email, link, position, avatar_file_name
+    form: name, email, link, bio, avatar_file_name
+  order_by: position
+  relationships: 
+  filters: 
+  search: name
+  application: ubucon
+
+Sponsor:
+  fields:
+    default: name, url, position, image_file_name
+    form: name, url, image_file_name
+  order_by: position
+  relationships: 
+  filters: 
+  search: name
+  application: ubucon
+
+User:
+  fields:
+    default: email, confirmation_token, remember_token, email_confirmed
+    form: email, confirmation_token, remember_token, email_confirmed
+  order_by: 
+  relationships: 
+  filters: 
+  search: 
+  application: ubucon
+

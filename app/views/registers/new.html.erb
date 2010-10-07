@@ -1,0 +1,16 @@
+<h1>Registers#new</h1>
+<p>Find me in app/views/registers/new.html.erb</p>
+
+<% semantic_form_for @register do |f|%>
+  <%= f.semantic_errors  %>
+  <%= f.inputs do %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :age %>
+    <%= f.input :email %>
+    <%= f.input :location %>
+    <%= f.input :twitter %>
+    <%= f.input :webpage %>
+  <% end -%>
+  <%= f.buttons %>
+<% end -%>
