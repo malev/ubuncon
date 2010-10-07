@@ -1,5 +1,7 @@
 Ubucon::Application.routes.draw do
   resources :registers
+  match "/donde" => "home#where"
+
   root :to => "home#index"
 
   #root :to => 'Clearance::Sessions#new'

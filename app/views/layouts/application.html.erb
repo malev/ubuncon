@@ -17,10 +17,10 @@
 <!-- Header -->
   <div id="header">
     <div class="container" style="width: 1000px;">
-      <ul class="links"><li class="menu-137 active-trail first active"><a href="http://ohio.ubuntu-us.org/" title="" class="active">Home</a></li>
-        <li><%= link_to 'Registrate!', new_register_path %></li>
+      <ul class="links">
+        <li class="menu-137 active-trail first active"><a href="http://ohio.ubuntu-us.org/" title="" class="active">Home</a></li>
         <li class="menu-119"><a href="http://ohio.ubuntuforums.org/" title="">Para quienes?</a></li>
-        <li class="menu-134"><a href="https://launchpad.net/%7Eubuntu-us-ohio" title="">Organizado por</a></li>
+        <li class="menu-134"><a href="https://www.ubuntu-ar.org" title="">Organizado por</a></li>
         <li class="menu-135"><a href="https://wiki.ubuntu.com/ArgentinaTeam" title="">Wiki</a></li>
         <li class="menu-136 last"><a href="http://ubuntu.com/" title="">Ubuntu.com</a></li>
         <li><a href="#">mas cosas aquí</a></li>
@@ -40,11 +40,10 @@
     <div class="container" style="width: 1000px;">
       <div class="container-inside">
         <ul class="links secondary-links">
-          <li class="menu-148 first"><a href="http://ohio.ubuntu-us.org/calendar" title="Calendar">Calendario</a></li>
-          <li class="menu-149"><a href="http://ohio.ubuntu-us.org/reloco" title="ReLoCos">Donde</a></li>
-          <li class="menu-151"><a href="http://ohio.ubuntu-us.org/irc" title="IRC">Algo loco</a></li>
-          <li class="menu-153"><a href="http://ohio.ubuntu-us.org/planet" title="">Planet</a></li>
-          <li class="menu-161 last"><a href="http://ohio.ubuntu-us.org/burningcircle" title="Burning Circle Podcast">Podcast</a></li>
+          <li class="menu-147 first"><%= link_to 'Registrate!', new_register_path %></li>
+          <li class="menu-148"><a href="http://ohio.ubuntu-us.org/calendar" title="Calendar">Calendario</a></li>
+          <li class="menu-149"><%= link_to '¿Dónde?', donde_path %></li>
+          <li class="menu-161 last"><a href="http://ohio.ubuntu-us.org/burningcircle" title="Burning Circle Podcast">Contactanos</a></li>
         </ul>
       </div>
     </div>
@@ -87,15 +86,15 @@
 
   </div>
   <div id="center">
-    <h1>Welcome</h1>
+    <h1>ubuncon 2010 - Argentina</h1>
     <div id="node-2" class="node clear-block">
       <div class="meta">
       </div>
     <div class="content">
 <p><%= image_tag 'logo-ar.png', :style => 'float: right; margin: 20px;' %></p>
 <!-- CONTENT -->
-  <p>Welcome to Ubuntu AR! Glad you could stop by.</p>
-  <p>Todo robado del sitio de Ubunto ohaio</p>
+  <p>Conferencia Ubuntu en la Universidad de Palermo.</p>
+  <p>Viernes 19 y sábado 20 de Noviembre de 2010.</p>
   <%= render :partial => 'shared/flashes' -%>
   <%= yield %>
   <%= render :partial => 'shared/javascript' %>
