@@ -18,6 +18,10 @@
   <div id="header">
     <div class="container" style="width: 1000px;">
       <ul class="links">
+        <%# @menu_links.each do |link| %>
+          <li class="menu-137 <%=  %>"></li>
+          <%#=  %>
+        <%# end -%>
         <li class="menu-137 active-trail first active"><a href="http://ohio.ubuntu-us.org/" title="" class="active">Home</a></li>
         <li class="menu-119"><a href="http://ohio.ubuntuforums.org/" title="">Para quienes?</a></li>
         <li class="menu-134"><a href="https://www.ubuntu-ar.org" title="">Organizado por</a></li>
@@ -27,7 +31,7 @@
       </ul>
       <div id="logo">
         <a href="http://www.ubuntu-ar.org/" title="Ubuntu Argentina">
-          <%= image_tag 'logo-ar.png' %>
+          <%= image_tag 'ubuntu_logo_trans.png', :style => 'width:192px;' %>
         </a>
       </div>
       <div id="block-block-3" class="block block-block">
@@ -81,7 +85,7 @@
         </div>
       </div>
       <div id="block-aggregator-category-1" class="block block-aggregator">
-        <%= link_to image_tag('ubuntu101010.png'), 'http://www.ubuntu.com' %>
+        <a href="http://www.ubuntu.com/"><img src="http://www.ubuntu.com/countdown/banner1.png" border="0" width="180" height="150" alt="The next version of Ubuntu is coming soon"></a>
       </div>
 
   </div>
