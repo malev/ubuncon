@@ -13,10 +13,14 @@ paginas:
 para quienes
 donde
 quienes
-registro
-contacto
+
+Páginas por defecto:
+====================
 home
+registro
+donde
 speakers
+contacto
 
 widgets
 =======
@@ -26,3 +30,4 @@ rss
 prioridades:
 donde
 cuando
+

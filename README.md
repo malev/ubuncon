@@ -1,20 +1,20 @@
-h1. This is a Conferences site
+# This is a Conferences site
 
-h2. Requeriments
+## Requeriments
 * Ruby
 * Rails 3
 * mysql
 * server with some linux distribution.
 
-h2. Use
+## Use
 When you have a conference and you want to promote it. It was intended to be able for the Ubucon, but now it's just an experiment.
 
-h2. TODO
+## TODO
 Social media, customizable layouts, RSS, a blog, etc.
 
-h2. Features
+## Features
 Nothing yet :(
 
-h2. License
+## License
 Copyright © 2007-2010 Marcos Vanetta, released under the MIT license
 
