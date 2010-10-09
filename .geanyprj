@@ -1,0 +1,8 @@
+
+[project]
+name=ubucon
+description=
+base_path=./
+run_cmd=
+regenerate=true
+type=None
